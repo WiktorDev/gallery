@@ -1,0 +1,52 @@
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
+    <title>Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.11.0/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content ">
+        <div class="px-2 mx-2 navbar-start">
+
+        </div> 
+        <div class="hidden px-2 mx-2 navbar-center lg:flex">
+          <div class="flex items-stretch">
+            <a class="btn btn-ghost btn-sm rounded-btn" href="/">Glowna</a> 
+            <a class="btn btn-ghost btn-sm rounded-btn" href="/admin/addimages">Dodaj zdjecia</a> 
+            <a class="btn btn-ghost btn-sm rounded-btn" href="/admin/adddir">Dodaj kategorie</a> 
+          </div>
+        </div> 
+        <div class="navbar-end"></div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+<script>
+    var notyf = new Notyf();
+  </script>
+  <% if (messages.error) { %>
+  <script>
+    notyf.error({
+        message: '<%- messages.error %>',
+        dismissible: true,
+        position: {
+          x: 'right',
+          y: 'top',
+        },
+    }) 
+    </script>
+  <% } %>
+  <% if (messages.success) { %>
+    <script>
+      notyf.success({
+          message: '<%- messages.success %>',
+          dismissible: true,
+          position: {
+            x: 'right',
+            y: 'top',
+          },
+      }) 
+      </script>
+    <% } %>

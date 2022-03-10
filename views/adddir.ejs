@@ -1,0 +1,18 @@
+<%- include('./nav'); -%>
+      <br><br><br><br>
+      <center>
+        <form action="/addcategory" method="POST" class="w-full md:w-1/3 ">
+          <h2 class="text-3xl text-center text-white-700 mb-4">Tworzenie kategorii</h2>
+          <div class="px-12 pb-10">
+            <div class="w-full mb-2">
+              <div class="form-control">
+                  <input type="text" placeholder="Nazwa kategorii" class="input input-bordered" name="name" required>
+              </div>
+          </div>
+            <br>
+            <button class="btn btn-primary" type="submit">Wyslij zapytanie</button>
+      </form>
+      </center>
+</body>
+
+</html>

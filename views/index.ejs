@@ -1,0 +1,22 @@
+<%- include('./nav'); -%>
+<body>
+  <% dir.forEach(function(dir){%>
+    <div class="flex">
+
+        <div class="flex items-center w-full px-4 py-10 card ">
+          <div class="card glass lg:card-side text-neutral-content">
+    
+            <div class="max-w-md card-body">
+              <h2 class="card-title" style="color:black"><%= dir %> </h2> 
+              <p style="color:black">Ilosc zdjec: x</p> 
+              <div class="card-actions">
+                <a href="/<%= dir %>" class="btn btn-success">Przejdz</a> 
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  <% }) %>
+</body>
+</html>

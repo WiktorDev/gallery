@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="/g.css">
+</head>
+<body>
+    <div class="row">
+
+        <% image.forEach(function (image){ %>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <a class="gallery" href="http://localhost:3000/<%= dir %>/<%= image %>">
+                                <img src="http://localhost:3000/<%= dir %>/<%= image %>" alt="" width="400">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        <% }) %>
+
+</div>
+</body>
+<script src="http://blog.compsoul.pl/uploads/js/comp.js"></script>
+<script src="http://blog.compsoul.pl/uploads/js/gallery.js"></script>
+<script>
+    (function ($) {
+      $(".gallery").gallery();
+    })(Comp);
+  </script>
+</html>
